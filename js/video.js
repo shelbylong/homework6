@@ -26,7 +26,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime = video.currentTime() + 5;
+	video.currentTime = video.currentTime()+5;
 	if (video.currentTime >= video.duration){
 		video.currentTime = 0;
 	}
@@ -50,6 +50,6 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this.value);
 	video.volume = this.value/100;
-	let newVol = (this.value)*100 + "%";
+	let newVol = (this.value)*10 + "%";
 	document.getElementById("volume").innerHTML = newVol;
 });
