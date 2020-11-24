@@ -26,7 +26,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	this.currentTime()+5;
+	video.currentTime = video.currentTime+5;
 	if (video.currentTime >= video.duration){
 		video.currentTime = 0;
 	}
@@ -55,9 +55,9 @@ document.querySelector("#volumeSlider").addEventListener("change", function() {
 });
 
 document.querySelector("#old").addEventListener("click", function() {
-	video.addClass(".oldTime")
+	video.classList.add(".oldTime");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
-	video.removeClass(".oldTime")
+	video.classList.remove(".oldTime");
 });
